@@ -4,15 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java面向对象知识总结, 徐临楷的小站">
-    <meta name="description" content="面向对象所谓面向对象,就是分析问题时以问题所涉及到的事或物为中心进行分析
-类表示对某一事物归纳或整理
-类的基本结构:
-class{
-属性
-方法
-}
-属性可理解为某一类事务的共同特征,声明属性时可不必初始化,在构造对象时会默认初始化,若初始化">
+    <meta name="keywords" content="配置SpringData jpa报错, 徐临楷的小站">
+    <meta name="description" content="在导入SpringData jpa依赖后时,配置实体类自动创建数据库表时出现错误
+网上搜了许多解决办法,有要加@Entity注释的,在url后加参数的等等,都无法解决。在仔细看日志发现
+也就是初始化连接池失败，数据库没有连接上。检查数据库的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +19,7 @@ class{
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java面向对象知识总结 | 徐临楷的小站</title>
+    <title>配置SpringData jpa报错 | 徐临楷的小站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -341,12 +336,12 @@ class{
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java面向对象知识总结</h1>
+                    <h1 class="description center-align post-title">配置SpringData jpa报错</h1>
                 </div>
             </div>
         </div>
@@ -368,9 +363,13 @@ class{
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%94%99%E8%AF%AF/">
+                                <span class="chip bg-color">错误</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -382,7 +381,7 @@ class{
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-02-07
+                    2023-03-04
                 </div>
                 
 
@@ -391,7 +390,7 @@ class{
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    606
+                    126
                 </div>
                 
 
@@ -416,36 +415,9 @@ class{
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>所谓面向对象,就是分析问题时以问题所涉及到的事或物为中心进行分析</p>
-<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>表示对某一事物归纳或整理</p>
-<p>类的基本结构:</p>
-<p>class{</p>
-<p>属性</p>
-<p>方法</p>
-<p>}</p>
-<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>可理解为某一类事务的共同特征,声明属性时可不必初始化,在构造对象时会默认初始化,若初始化,则代表所有对象的属性完全相同<strong>普通变量一定要初始化</strong></p>
-<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>可理解为某一类事务的功能,声明方法:返回值类型 方法名(参数列表){}</p>
-<p>方法参数:传递参数时要遵循参数的个数,顺序,类型匹配,当参数个数不确定,但类型相同,可用可变参数</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> name<span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>方法参数的传递为值传递,基本数据类型:数值,引用数据类型:地址</strong></p>
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>对象表示某一具体事务</p>
-<p>创建对象(类的实例化): new 类名() 一般对象要用引用类型的变量来引用,相当于c语言的指针.</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">User</span> user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>一个类的对象可以有多个</p>
-<p>Java中有三个区,分别是栈,堆,和方法区(元空间)</p>
-<p>普通变量和方法存储在栈区,对象存储在堆区,类的信息存储在元空间</p>
-<p>创建对象时,通过引用类型去元空间查找该类的信息,并在堆中创建一个该类的对象(实例),用栈区的引用类型变量作为其引用</p>
-<p>引用类型的默认值为:null</p>
-<p>访问对象属性:对象.属性</p>
-<p>调用对象方法:对象.方法</p>
-<p>eg:猫和狗为具体对象,动物为类</p>
-<h2 id="静态"><a href="#静态" class="headerlink" title="静态"></a>静态</h2><p>针对具体对象的属性和方法称为成员属性和成员方法,而把与对象无关的,只和类相关的称为静态,同关键字static修饰,有静态属性和静态方法.</p>
-<p>调用静态:类名.属性 类名.方法 也可以用对象访问,因为得到对象就一定能得到类</p>
-<p><strong>成员方法中可用访问静态属性和方法,但静态方法中不能访问成员属性和方法</strong></p>
-<h3 id="静态代码块"><a href="#静态代码块" class="headerlink" title="静态代码块"></a>静态代码块</h3><p>静态代码块在类的加载完后,JVM自动执行,一般用于完成静态属性初始化的过程.</p>
-<p>语法:static{}</p>
+                <p>在导入SpringData jpa依赖后时,配置实体类自动创建数据库表时出现错误<br><img src="Snipaste_2023-03-04_15-43-30.jpg"></p>
+<p>网上搜了许多解决办法,有要加@Entity注释的,在url后加参数的等等,都无法解决。<br>在仔细看日志发现<br><img src="Snipaste_2023-03-04_15-44-10.jpg"></p>
+<p>也就是初始化连接池失败，数据库没有连接上。检查数据库的配置信息，发现url的数据库接口不知何时写出了3304，正确的应该是3306。<br><strong>要学会看日志信息！！</strong></p>
 
                 
             </div>
@@ -472,7 +444,7 @@ class{
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://linkaixu.github.io/2023/02/07/java-mian-xiang-dui-xiang-zhi-shi-zong-jie/">https://linkaixu.github.io/2023/02/07/java-mian-xiang-dui-xiang-zhi-shi-zong-jie/</a>
+                    <a href="https://linkaixu.github.io/2023/03/04/cuo-wu-6/">https://linkaixu.github.io/2023/03/04/cuo-wu-6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -509,7 +481,11 @@ class{
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E9%94%99%E8%AF%AF/">
+                                    <span class="chip bg-color">错误</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -586,17 +562,18 @@ class{
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/02/09/shu-ju-ku-xue-xi-er-guan-xi-mo-xing/">
+                <a href="/2023/03/04/cuo-wu-6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="数据库学习(二)-关系模型">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="配置SpringData jpa报错">
                         
-                        <span class="card-title">数据库学习(二)-关系模型</span>
+                        <span class="card-title">配置SpringData jpa报错</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -606,9 +583,9 @@ class{
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -617,11 +594,12 @@ class{
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/%E9%94%99%E8%AF%AF/">
+                        <span class="chip bg-color">错误</span>
                     </a>
                     
                 </div>
@@ -635,13 +613,13 @@ class{
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/02/04/shu-ju-ku-xue-xi-yi-shu-ju-ku-xi-tong/">
+                <a href="/2023/03/04/cuo-wu-5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="数据库学习(一)-数据库系统">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="启动Tomcat,配置了环境变量,startup依然闪退">
                         
-                        <span class="card-title">数据库学习(一)-数据库系统</span>
+                        <span class="card-title">启动Tomcat,配置了环境变量,startup依然闪退</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -652,7 +630,7 @@ class{
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-04
                             </span>
                         <span class="publish-author">
                             
@@ -665,8 +643,8 @@ class{
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/%E9%94%99%E8%AF%AF/">
+                        <span class="chip bg-color">错误</span>
                     </a>
                     
                 </div>

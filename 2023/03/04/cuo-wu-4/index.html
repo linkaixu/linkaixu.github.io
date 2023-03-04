@@ -4,12 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据库-SQL, 徐临楷的小站">
-    <meta name="description" content="SQL语言SQL语言主要由以下9个单词引导的操作语句来构成.
-DDL语句引导词:Create,Alter,Drop
-DML语句引导词:Insert,Delete,Update,Select
-DCL语句引导词:Grant,Revoke
-建立数">
+    <meta name="keywords" content="Unknown column ‘字段名‘ in ‘field list‘, 徐临楷的小站">
+    <meta name="description" content="maybatis连接数据库查询时出现 Unknown column ‘字段名‘ in ‘field list‘ 错误解决方案可能的原因有以下几种:
+1.检查实体类属性跟数据表字段名称是否一致2.检查数据表字段有没有空格或者回车3.检查数据库">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +18,7 @@ DCL语句引导词:Grant,Revoke
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据库-SQL | 徐临楷的小站</title>
+    <title>Unknown column ‘字段名‘ in ‘field list‘ | 徐临楷的小站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -338,12 +335,12 @@ DCL语句引导词:Grant,Revoke
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据库-SQL</h1>
+                    <h1 class="description center-align post-title">Unknown column ‘字段名‘ in ‘field list‘</h1>
                 </div>
             </div>
         </div>
@@ -367,8 +364,8 @@ DCL语句引导词:Grant,Revoke
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                <span class="chip bg-color">数据库</span>
+                            <a href="/tags/%E9%94%99%E8%AF%AF/">
+                                <span class="chip bg-color">错误</span>
                             </a>
                         
                     </div>
@@ -383,7 +380,7 @@ DCL语句引导词:Grant,Revoke
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-02-19
+                    2023-03-04
                 </div>
                 
 
@@ -392,7 +389,7 @@ DCL语句引导词:Grant,Revoke
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    250
+                    136
                 </div>
                 
 
@@ -417,24 +414,9 @@ DCL语句引导词:Grant,Revoke
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="SQL语言"><a href="#SQL语言" class="headerlink" title="SQL语言"></a>SQL语言</h2><p>SQL语言主要由以下9个单词引导的操作语句来构成.</p>
-<p>DDL语句引导词:<strong>Create</strong>,<strong>Alter</strong>,<strong>Drop</strong></p>
-<p>DML语句引导词:<strong>Insert</strong>,<strong>Delete</strong>,<strong>Update</strong>,<strong>Select</strong></p>
-<p>DCL语句引导词:<strong>Grant</strong>,<strong>Revoke</strong></p>
-<h2 id="建立数据库"><a href="#建立数据库" class="headerlink" title="建立数据库"></a>建立数据库</h2><p>包括两件事:定义数据库和表(DDL),向表中追加元组(DML)</p>
-<p><strong>DDL</strong>:通常由DBA来执行<br>1.创建数据库-<strong>Create Database</strong></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">database</span> 数据库名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<p>2.创建DB中的Table(定义关系模式)-<strong>Create Table</strong></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> 表名<span class="token punctuation">(</span>列名 数据类型<span class="token punctuation">[</span><span class="token keyword">Primary</span> <span class="token keyword">key</span><span class="token operator">|</span><span class="token keyword">Unique</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-             列名 数据类型<span class="token punctuation">[</span><span class="token operator">Not</span> <span class="token boolean">null</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-             <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-             <span class="token punctuation">[</span><span class="token punctuation">,</span>表级约束条件<span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>“[]”表示括起来的内容可以省略,”|”表示其隔开的两项任务其一<br>Primary key:主键约束,每个表只能创建一个主键约束.<br>Unique:唯一性约束(即候选键),可以有多个唯一性约束.<br>Not null:非空约束,指该列是否可以有空值出现</p>
-<p>DML:通常由用户或应用程序员使用,访问经授权的数据库<br>1.向表中追加元组</p>
+                <p>maybatis连接数据库查询时出现 Unknown column ‘字段名‘ in ‘field list‘ 错误解决方案<br>可能的原因有以下几种:</p>
+<p><strong>1.检查实体类属性跟数据表字段名称是否一致</strong><br><strong>2.检查数据表字段有没有空格或者回车</strong><br><strong>3.检查数据库编码和数据表字段编码是否一致</strong><br><strong>4.检查数据库有没有用对!!!</strong></p>
+<p>我就是因为mybatis配置文件直接复制上一个项目的配置文件,忘记改数据库造成的!!!</p>
 
                 
             </div>
@@ -461,7 +443,7 @@ DCL语句引导词:Grant,Revoke
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://linkaixu.github.io/2023/02/19/shu-ju-ku-sql/">https://linkaixu.github.io/2023/02/19/shu-ju-ku-sql/</a>
+                    <a href="https://linkaixu.github.io/2023/03/04/cuo-wu-4/">https://linkaixu.github.io/2023/03/04/cuo-wu-4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -499,8 +481,8 @@ DCL语句引导词:Grant,Revoke
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                    <span class="chip bg-color">数据库</span>
+                                <a href="/tags/%E9%94%99%E8%AF%AF/">
+                                    <span class="chip bg-color">错误</span>
                                 </a>
                             
                         </div>
@@ -583,13 +565,13 @@ DCL语句引导词:Grant,Revoke
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/03/04/cuo-wu-1/">
+                <a href="/2023/03/04/cuo-wu-5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Error parsing SQL Mapper Configuration. Cause:org.apache.ibatis.builder.BuilderException">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="启动Tomcat,配置了环境变量,startup依然闪退">
                         
-                        <span class="card-title">Error parsing SQL Mapper Configuration. Cause:org.apache.ibatis.builder.BuilderException</span>
+                        <span class="card-title">启动Tomcat,配置了环境变量,startup依然闪退</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -628,13 +610,13 @@ DCL语句引导词:Grant,Revoke
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/02/10/shu-ju-ku-xue-xi-san-guan-xi-dai-shu/">
+                <a href="/2023/03/04/cuo-wu-3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="数据库学习(三)-关系代数">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Try-with-resources are not supported at language level ‘5‘">
                         
-                        <span class="card-title">数据库学习(三)-关系代数</span>
+                        <span class="card-title">Try-with-resources are not supported at language level ‘5‘</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -645,7 +627,7 @@ DCL语句引导词:Grant,Revoke
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-04
                             </span>
                         <span class="publish-author">
                             
@@ -658,8 +640,8 @@ DCL语句引导词:Grant,Revoke
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/%E9%94%99%E8%AF%AF/">
+                        <span class="chip bg-color">错误</span>
                     </a>
                     
                 </div>

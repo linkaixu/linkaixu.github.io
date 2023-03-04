@@ -4,12 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据库-SQL, 徐临楷的小站">
-    <meta name="description" content="SQL语言SQL语言主要由以下9个单词引导的操作语句来构成.
-DDL语句引导词:Create,Alter,Drop
-DML语句引导词:Insert,Delete,Update,Select
-DCL语句引导词:Grant,Revoke
-建立数">
+    <meta name="keywords" content="启动Tomcat,配置了环境变量,startup依然闪退, 徐临楷的小站">
+    <meta name="description" content="启动Tomcat,配置了环境变量,startup依然闪退.一般通过startup.bat启动tomcat时流程是：startup-&amp;gt;catalina-&amp;gt;setclasspath-&amp;gt;catalina,这3个bat文件任何一个">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +17,7 @@ DCL语句引导词:Grant,Revoke
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据库-SQL | 徐临楷的小站</title>
+    <title>启动Tomcat,配置了环境变量,startup依然闪退 | 徐临楷的小站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -338,12 +334,12 @@ DCL语句引导词:Grant,Revoke
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据库-SQL</h1>
+                    <h1 class="description center-align post-title">启动Tomcat,配置了环境变量,startup依然闪退</h1>
                 </div>
             </div>
         </div>
@@ -367,8 +363,8 @@ DCL语句引导词:Grant,Revoke
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                <span class="chip bg-color">数据库</span>
+                            <a href="/tags/%E9%94%99%E8%AF%AF/">
+                                <span class="chip bg-color">错误</span>
                             </a>
                         
                     </div>
@@ -383,7 +379,7 @@ DCL语句引导词:Grant,Revoke
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-02-19
+                    2023-03-04
                 </div>
                 
 
@@ -392,7 +388,7 @@ DCL语句引导词:Grant,Revoke
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    250
+                    306
                 </div>
                 
 
@@ -417,24 +413,10 @@ DCL语句引导词:Grant,Revoke
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="SQL语言"><a href="#SQL语言" class="headerlink" title="SQL语言"></a>SQL语言</h2><p>SQL语言主要由以下9个单词引导的操作语句来构成.</p>
-<p>DDL语句引导词:<strong>Create</strong>,<strong>Alter</strong>,<strong>Drop</strong></p>
-<p>DML语句引导词:<strong>Insert</strong>,<strong>Delete</strong>,<strong>Update</strong>,<strong>Select</strong></p>
-<p>DCL语句引导词:<strong>Grant</strong>,<strong>Revoke</strong></p>
-<h2 id="建立数据库"><a href="#建立数据库" class="headerlink" title="建立数据库"></a>建立数据库</h2><p>包括两件事:定义数据库和表(DDL),向表中追加元组(DML)</p>
-<p><strong>DDL</strong>:通常由DBA来执行<br>1.创建数据库-<strong>Create Database</strong></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">database</span> 数据库名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<p>2.创建DB中的Table(定义关系模式)-<strong>Create Table</strong></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> 表名<span class="token punctuation">(</span>列名 数据类型<span class="token punctuation">[</span><span class="token keyword">Primary</span> <span class="token keyword">key</span><span class="token operator">|</span><span class="token keyword">Unique</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-             列名 数据类型<span class="token punctuation">[</span><span class="token operator">Not</span> <span class="token boolean">null</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-             <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-             <span class="token punctuation">[</span><span class="token punctuation">,</span>表级约束条件<span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>“[]”表示括起来的内容可以省略,”|”表示其隔开的两项任务其一<br>Primary key:主键约束,每个表只能创建一个主键约束.<br>Unique:唯一性约束(即候选键),可以有多个唯一性约束.<br>Not null:非空约束,指该列是否可以有空值出现</p>
-<p>DML:通常由用户或应用程序员使用,访问经授权的数据库<br>1.向表中追加元组</p>
+                <p><strong>启动Tomcat,配置了环境变量,startup依然闪退.</strong><br>一般通过startup.bat启动tomcat时流程是：startup-&gt;catalina-&gt;setclasspath-&gt;catalina,这3个bat文件任何一个出问题都可能导致闪退.<br>先用记事本打开startup,将start改完run,并最后添加pause(防止闪退).<br><img src="Snipaste_2023-02-15_14-16-03.jpg"></p>
+<p>再次打开发现报错Unrecognized option: –add-opens&#x3D;java.base&#x2F;java.lang&#x3D;ALL-UNNAMED,未识别启动项参数.<br>用记事本打开catalina将启动参数都删除后,<br>再次启动报错org&#x2F;apache&#x2F;catalina&#x2F;startup&#x2F;Bootstrap has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0<br>发现JRE的版本不对,很奇怪,我跟着一个博主配置的环境,都是JDK8但是他的Tomcat10能正常启动<br>于是我又上网搜了Tomcat对应的JAVA版本,才恍然大悟<br><img src="1396952-20211213163553892-1634780540.png"></p>
+<p><strong>虽然Tomcat10,但10.1x版本后只支持JDK11!!!</strong>,而那个博主下的是10.0x,<strong>实在是太坑了!!!</strong>,<strong>换了Tomcat9配置环境变量后可以正常启动.</strong></p>
+<p>正常启动后,发现输出日志乱码<br>需要再Tomcat目录下的conf目录中的logging.properties配置文件中,改java.util.logging.ConsoleHandler.encoding &#x3D; GBK,即可解决。</p>
 
                 
             </div>
@@ -461,7 +443,7 @@ DCL语句引导词:Grant,Revoke
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://linkaixu.github.io/2023/02/19/shu-ju-ku-sql/">https://linkaixu.github.io/2023/02/19/shu-ju-ku-sql/</a>
+                    <a href="https://linkaixu.github.io/2023/03/04/cuo-wu-5/">https://linkaixu.github.io/2023/03/04/cuo-wu-5/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -499,8 +481,8 @@ DCL语句引导词:Grant,Revoke
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                    <span class="chip bg-color">数据库</span>
+                                <a href="/tags/%E9%94%99%E8%AF%AF/">
+                                    <span class="chip bg-color">错误</span>
                                 </a>
                             
                         </div>
@@ -583,13 +565,13 @@ DCL语句引导词:Grant,Revoke
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/03/04/cuo-wu-1/">
+                <a href="/2023/03/04/cuo-wu-6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Error parsing SQL Mapper Configuration. Cause:org.apache.ibatis.builder.BuilderException">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="配置SpringData jpa报错">
                         
-                        <span class="card-title">Error parsing SQL Mapper Configuration. Cause:org.apache.ibatis.builder.BuilderException</span>
+                        <span class="card-title">配置SpringData jpa报错</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -628,13 +610,13 @@ DCL语句引导词:Grant,Revoke
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/02/10/shu-ju-ku-xue-xi-san-guan-xi-dai-shu/">
+                <a href="/2023/03/04/cuo-wu-4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="数据库学习(三)-关系代数">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Unknown column ‘字段名‘ in ‘field list‘">
                         
-                        <span class="card-title">数据库学习(三)-关系代数</span>
+                        <span class="card-title">Unknown column ‘字段名‘ in ‘field list‘</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -645,7 +627,7 @@ DCL语句引导词:Grant,Revoke
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-04
                             </span>
                         <span class="publish-author">
                             
@@ -658,8 +640,8 @@ DCL语句引导词:Grant,Revoke
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/%E9%94%99%E8%AF%AF/">
+                        <span class="chip bg-color">错误</span>
                     </a>
                     
                 </div>
